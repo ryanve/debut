@@ -14,10 +14,33 @@ svg {
   height: auto;
 }
 
+::selection {
+  background: coral;
+  color: black;
+}
+
+:focus {
+  outline-style: solid;
+  outline-color: #bc0bc0;
+  outline-offset: 0;
+  outline-width: .08rem;
+  text-decoration-style: dotted;
+}
+
+:hover {
+  text-decoration-style: solid;
+}
+
+.mold { font: inherit }
 .loki { line-height: inherit; font-size: .666666rem }
 .noki { line-height: inherit; font-size: 1rem }
 .yoki { line-height: inherit; font-size: 2rem }
 .hiki { line-height: inherit; font-size: 2.666666rem }
+.bold { font-weight: bold }
+
+@media (max-width: 30em) {
+  .hiki { font-size: 2rem }
+}
 
 .diy {
   box-sizing: border-box;
@@ -52,11 +75,6 @@ svg {
   max-width: 20em;
 }
 
-::selection {
-  background: darkorange;
-  color: black;
-}
-
 .basis-quarter { flex-basis: 25% }
 .basis-half { flex-basis: 50% }
 .basis-full { flex-basis: 100% }
@@ -80,6 +98,10 @@ npm.im/flexboxes
 .flow-wrap {flex-wrap: wrap}
 .flow-warp {flex-wrap: wrap-reverse}
 
+@media (orientation: portrait) {
+  .blop { display: table; }
+  .blop + .blop { margin-block-start: .2em }
+}
 
 /**
 github.com/ryanve/flow.css
